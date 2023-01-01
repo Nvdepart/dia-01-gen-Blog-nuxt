@@ -1,15 +1,26 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-col>
-        <h1>FreeCommerce</h1>
-      </v-col>
-    </v-row>
-  </v-container>
+  <div>
+    <NavBar />
+    <HomeCarousel />
+    <Footer />
+  </div>
 </template>
 
 <script>
+
 export default {
-  name: 'IndexPage'
+  async created() {
+    this.sale_items = await this.$content("products")
+      .where({ onSale: true })
+      .fetch();
+    this.products = await this.$content("products").fetch();
+  },
+    date() {
+        return {
+            products: null,
+            sale_items: null,
+        };
+    },
+  
 }
 </script>

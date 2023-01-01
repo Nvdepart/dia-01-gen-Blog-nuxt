@@ -1,0 +1,10 @@
+.el{
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.08) !important;
+}
+.pointer{
+    cursor:pointer;
+}
+.swal2-popup.swal2-toast .swal2-html-container,
+.swal2-container.swal2-center > .swal2-popup {
+  font-family: "DM Sans" !important;
+}
